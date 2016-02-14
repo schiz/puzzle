@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+<![endif]-->
+ 
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title></title> 
+
+     <link rel="stylesheet/less" type="text/css" href="css/styles.less"> 
+     <script src="js/less.js" type="text/javascript"></script>
+     <script src="js/bd.js" type="text/javascript"></script>
+     <script src="js/blowfish.min.js" type="text/javascript"></script>
+     <link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />   -->
+
+  </head>
+
+  <body>
+
+
+    <!-- Main container start -->    
+
+      <section class="container">
+      <div class="browsers">
+        <p>Игра “Паззлы” не поддерживается Вашей текущей версией браузера.</p>
+        <div>Чтобы сыграть, загрузите обновленную версию.
+              Для этого выберите подходящий браузер, 
+              перейдите по ссылке и следуйте инструкциям.
+        </div>
+          <a href="http://www.google.com/intl/ru/chrome/browser/"><img src="images/chrome.png"></a>        
+          <a href="http://www.mozilla.org/ru/firefox/new/"><img src="images/firefox.png"></a>
+          <a href="http://www.apple.com/safari/"><img src="images/safari.png"></a>
+          <a href="http://www.opera.com/ru/"><img src="images/opera.png"></a>
+          <a href="http://www.microsoft.com/en-us/download/internet-explorer-10-details.aspx"><img src="images/ie.png"></a>        
+
+      </div>
+
+      <section class="wrapper">
+
+          <!-- start screnn -->
+
+        <section class="start-screen">
+
+          <a class="start-btn" href="#">
+
+            <img src="images/start-btn.png"/>
+
+          </a>
+
+          <a class="rules-btn" href="#">Правила</a>
+
+          <a class="ranking-btn" data-type="outerLink" href="#rating.html">Рейтинг</a>
+
+        </section>
+
+        <!-- end start screen -->
+
+        <!-- rules screen -->
+
+        <div class="rules-screen">
+
+          <header>Правила игры "Паззлы"</header>
+
+          <figure class="rules-text">
+
+            <div class="text-wrapper">
+              Предлагаем Вам сыграть в увлекательную игру, развивающую  образное и логическое мышления, произвольное внимание. 
+На экране – фотография, разбитая на кусочки паззла.
+В каждой новой игре Вам будет предложено собрать уникальный паззл.
+Перетаскивать кусочки паззла можно с помощью левой кнопки мышки.
+Если перенести кусочек паззла в ячейку, которая ему не соответствует – засчитается ошибка.
+Ваша задача – собрать фотографию заповедника. 
+Побеждает тот, кто соберет паззл за минимальное время, допустив минимальное количество ошибок.
+После завершения игры можно сохранить свой результат в рейтинге, используя промо-код, или улучшить свой результат, начав игру заново. 
+Желаем удачи!
+            </div>
+          </figure>
+        </div>
+
+        <!-- end rules screen -->
+        <!-- game screen -->
+
+        <section class="game-screen">
+
+          <figure class="info">
+
+            <div class="timer">0:00</div>
+
+            <a class="reload" href="#">
+
+              <img src="images/reload.png"/>
+
+            </a>
+
+            <div class="errorsCount">Ошибки: <span id="errors">0</span> </div>
+
+          </figure>
+
+          <figure class="game-field">
+            <div class="puzzleSet left"></div>
+             <div class="game-image">
+              <div class="dropField"></div>
+             </div>
+            <div class="puzzleSet right"></div>
+            <div class="puzzleSet bottom"></div>
+          </figure> 
+          <figure class="congrat">
+            <p>Поздравляем!</p>
+            <div>
+              Вы успешно собрали фотографию 
+              Еллоустоунского заповедника, США
+            </div>
+            <a href="#"><img src="images/result-btn.png"></a>
+          </figure>
+
+        </section>
+
+        <!-- end game screen -->
+
+        <!-- result screen start -->
+
+        <section class="result-screen">
+
+          <header>Ваш результат</header>
+
+          <p class="seconds">Секунды: <span>58</span> </p>
+
+          <p class="errors">Ошибки: <span>58</span> </p>
+
+          <a href="#" class="saveBtn">Сохранить результат</a>
+
+          <a href="#" class="playAgain" id="playAgain">Начать заново</a>
+
+          <img class="divider" src="images/divider.png"/>
+
+          <p class="share">Поделиться результатом</p>
+          
+           <div class="js-share-block" data-summary="Воспользуйся кодом с магнита при покупке продуктов Amway Home – сохрани результат игры и получи шанс выиграть приз! " data-title="Играй и сохраняй с Amway Home!"
+                 data-url="http://priroda-amway.ru/game/" data-image="/bitrix/templates/main/img/amway-game.jpg">
+                <div class="js-share-button" data-social="vkontakte"><img src="images/vkontakte.png"/></div>
+                <div class="js-share-button" data-social="facebook"><img src="images/facebook.png"/></div>
+            </div>
+
+        </section>
+
+        <!-- result screen end -->
+
+      </section>
+
+      <!-- success save start -->
+
+      <section class="save-result">
+
+        <p class="text">ваш результат успешно сохранен!</p>
+
+        <a href="#" class="backToGame">
+
+          <img src="images/backToGame.png"/>
+
+        </a>
+
+      </section>
+
+      <!-- success save end -->
+
+      </section>   
+
+    <!-- Main container end -->     
+
+    
+
+  <script type="text/javascript" src="js/vendor.js"></script>
+
+  <script type="text/javascript" src="js/main.src.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(shareInit);
+
+
+    function shareInit() {
+        $('.share-buttons span').bind('click', shareClick);
+        $('.js-share-button').bind('click', shareClick);
+    }
+    function shareClick() {
+
+        var shareBlock = $(this).parents('.share-block');
+        if (!shareBlock.length) shareBlock = $(this).parents('.js-share-block');
+
+        var social = $(this).data('social'),
+            dataShare = {
+                summary:  shareBlock.data('summary'),
+                title:    shareBlock.data('title'),
+                url:    shareBlock.data('url'),
+                fb_image:    "/images/fb-pic.png",
+                vk_image: "/images/vk-pic.jpg"
+            };
+
+        var url = '';
+        if (social == 'facebook') {
+            url = "http://www.facebook.com/sharer.php?s=100"
+                +"&p[title]="+encodeURIComponent(dataShare.title)
+                +"&p[summary]="+encodeURIComponent(dataShare.summary)
+                +"&p[url]="+encodeURIComponent(dataShare.url)
+                +"&p[images][0]=http://www.puzzle.mnb-t.com"+encodeURIComponent(dataShare.fb_image);
+        }
+        if (social == 'vkontakte') {
+            url = "http://vkontakte.ru/share.php?"
+                +"title="+encodeURIComponent(dataShare.title)
+                +"&description="+encodeURIComponent(dataShare.summary)
+                +"&url="+encodeURIComponent(dataShare.url)
+                +"&image=http://puzzle.mnb-t.com"+encodeURIComponent(dataShare.vk_image);
+        }
+        if (social == 'twitter') {
+            url = "http://twitter.com/share?"
+                +"text="+encodeURIComponent(dataShare.title)
+                +"&url="+encodeURIComponent(dataShare.url);
+
+        }
+        if (url != '') window.open(url,'','toolbar=0,status=0,width=600,height=400');      
+    }
+
+</script>
+
+  </body>
+
+</html>
+
